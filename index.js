@@ -13,8 +13,8 @@ class Svg {
     render() {
       return `version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"`;
     }
-    setText(text, color) {
-      this.textElement = ` <text x="150" y="125" font-size="60" text-anchor="middle" fill=${color}>${text}</text>`;
+    setText(text,color){
+      this.textElement= ` <text x="150" y="125" font-size="60" text-anchor="middle" fill=${color}>${text}</text>`
     }
     setShapeElement(shape) {
       this.shapeElement = shape.render();
