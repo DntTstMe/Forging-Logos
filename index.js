@@ -83,3 +83,23 @@ const shapeMap = {
     // Create a new shape and set it as the shapeElement in the Svg instance
     svg.setShapeElement(new ShapeConstructor(data.shapeColor));
     const svgContent = `<svg ${svg.render()}>${svg.shapeElement}${svg.textElement}</svg>`;
+    try {
+        // Write SVG content to the specified file
+        await fs.writeFile(folderPath + fileName, svgContent);
+        console.log('Logo generated successfully!');
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    // Function to initialize the app
+    async function init() {
+      // Prompt the user with questions and wait for answers
+      const answers = await inquirer.prompt(questions);
+      console.log(answers);
+      // Generate and save the SVG logo using the provided answers
+      await writeToFile('logo.svg', answers);
+    }
+    // Call the init function to start the app
+    init();
+    
+    
