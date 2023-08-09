@@ -7,31 +7,28 @@ A logo generator
 A permissive license that allows users to do almost anything with the code as long as they provide attribution back to the author and don’t hold the author liable. This license is widely used for its simplicity and permissiveness.
 
 ## Description
-
+This application is designed to generate a 1-3 letter logo.svg file in your choice of color. Your shape options are circle, triangle and square. Follow the usage directions below, please. 
 
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#instructions)
 - [License](#license)
-- [Contributing](#contribution)
 - [Tests](#test)
 - [Questions](#questions)
 
 ## Installation
-This application requires Node.js, and packages: inquirer & fs.
+This application requires Node.js, and packages: inquirer, fs, is-css3-color  and jest.
 
 ## Usage
-Open your terminal in the appropriate application location and begin the process by entering "node index.js"
+* Type into your CLI "node index.js" to get started and follow the prompts. Your output file will be in the example file.
+* For color selections you can use css keywords or hex colors
 
 Here is a link to the live demo: 
 
 
-## Contributing
-Contribute where you see fit, please. 
-
 ## Tests
-Use application as stated above for any tests.
+* Type "npm test" in your CLI to run through the jest tests.
 
 ## Questions
 For any questions or concerns, please reach out to me through the following contact information:
