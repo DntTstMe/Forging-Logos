@@ -20,3 +20,45 @@ class Svg {
       this.shapeElement = shape.render();
     }
   }
+  // Questions for the inquirer prompt
+const questions = [
+    {
+      type: 'input',
+      name: 'text',
+      message: 'Please enter 3 characters for your logo:',
+      //validate to make sure a max of 3 characters are entered
+      validate: nameInput => {
+          if (nameInput.length === 0) {
+          return 'Please enter at least 1 character.';
+          }
+          if (nameInput.length > 3) {
+          return 'Please enter no more than 3 characters.';
+          }
+          return true; // Return true for a valid input
+      }
+    },
+    {
+      type: 'input',
+      name: 'textColor',
+      message: 'Please enter a color name or hexidecimal number for your logo text:',
+    },
+    {
+      type: 'list',
+      name: 'shape',
+      message: 'What shape would you like for your logo?',
+      choices: ['circle', 'triangle', 'square'],
+    },
+    {
+      type: 'input',
+      name: 'shapeColor',
+      message: 'Please enter a color for your logo shape with a color name or hexidecimal number:',
+      validate: nameInput => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log('Please enter a color for your logo shape with a color name or hexidecimal number:');
+            return false;
+          }
+        }
+    },
+  ];
