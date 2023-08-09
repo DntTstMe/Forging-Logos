@@ -27,6 +27,8 @@ This application requires Node.js, and packages: inquirer, fs, is-css3-color  an
 Here is a link to the live demo: 
 https://drive.google.com/file/d/1pzXCk-SYOdcmM_Jsb8LU1atEgHIHHM9A/view
 
+![Alt text](examples/logo.svg)
+
 
 ## Tests
 * Type "npm test" in your CLI to run through the jest tests.
