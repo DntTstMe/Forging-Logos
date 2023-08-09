@@ -62,3 +62,24 @@ const questions = [
         }
     },
   ];
+  // Map the shape names to their corresponding constructors
+const shapeMap = {
+    circle: Circle,
+    triangle: Triangle,
+    square: Square,
+  };
+  // Function to write SVG content to a file
+  async function writeToFile(fileName, data) {
+    const folderPath = './examples/';
+    const svg = new Svg();
+    svg.setText(data.text, data.textColor);
+  
+    // Get the constructor for the selected shape from shapeMap
+    const ShapeConstructor = shapeMap[data.shape];
+    if (!ShapeConstructor) {
+      console.error(`Invalid shape selected: ${data.shape}`);
+      return;
+    }
+    // Create a new shape and set it as the shapeElement in the Svg instance
+    svg.setShapeElement(new ShapeConstructor(data.shapeColor));
+    const svgContent = `<svg ${svg.render()}>${svg.shapeElement}${svg.textElement}</svg>`;
